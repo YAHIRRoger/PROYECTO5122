@@ -12,29 +12,33 @@ Algoritmo Rogelio_Kevin
 			
 			
 			
-			definir lim,secp,sec1,sec2 Como Entero;
+			definir limite,num_n,num1,num2 Como Entero;
 			escribir "ingrese un numero al cual se aproxime la serie de fibonacci ";
-			leer lim;
-			sec1<-0;
-			si (lim<0)
+			leer limite;
+			num1<-0;
+			
+			si (limite<0)
 				Escribir "la serie no va hacia abajo";
 			FinSi
-			si (lim>0)
-				escribir sec1;
-			FinSi
-			si (lim>1)
-				sec2<-1;
-				escribir sec2;
+			
+			si (limite>0)
+				escribir num1;
 			FinSi
 			
-			Mientras (sec1<lim & sec2<lim & secp<lim)
-				secp<-sec1+sec2;
-				si (secp<lim)
-					escribir secp;
+			si (limite>1)
+				num2<-1;
+				escribir num2;
+			FinSi
+			
+			Mientras (num1<limite & num2<limite & num_n<limite)
+				num_n<-num1+num2;
+				
+				si (num_n<limite)
+					escribir num_n;
 				FinSi
 				
-				sec1<-sec2;
-				sec2<-secp;
+				num1<-num2;
+				num2<-num_n;
 				
 			FinMientras
 			
