@@ -16,24 +16,24 @@ Algoritmo Rogelio_Kevin
 			escribir "ingrese un numero al cual se aproxime la serie de fibonacci ";
 			leer limite;
 			num1<-0;
-			
-			si (limite<0)
+			num2<-1;
+			si (limite<=0)
 				Escribir "la serie no va hacia abajo";
+			SiNo
+				
+				si (limite>0)
+					escribir num1;
+					
+					si (limite>1)
+					
+						escribir num2;
+					FinSi
 			FinSi
-			
-			si (limite>0)
-				escribir num1;
-			FinSi
-			
-			si (limite>1)
-				num2<-1;
-				escribir num2;
-			FinSi
-			
-			Mientras (num1<limite & num2<limite & num_n<limite)
+		
+			Mientras (num1<=limite & num2<=limite & num_n<=limite)
 				num_n<-num1+num2;
 				
-				si (num_n<limite)
+				si (num_n<=limite)
 					escribir num_n;
 				FinSi
 				
@@ -42,7 +42,8 @@ Algoritmo Rogelio_Kevin
 				
 			FinMientras
 			
-			
+		FinSi
+		
 			
 		2:
 			
