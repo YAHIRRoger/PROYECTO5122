@@ -1,286 +1,168 @@
-Algoritmo Rogelio_Kevin 
-	Definir eleccion Como Entero; 
-	escribir "ingrese un numero de una operacion la cual quiera realizar" ; 
-	escribir "1.- secuencia fibonacci ";
-	Escribir "2.- piramide de caracteres ";
-	escribir "3.- operaciones basicas " ; 
-	
-	leer eleccion;
-	
-	segun eleccion hacer 
+Algoritmo Rogelio_Kevin
+	Definir eleccion Como Entero
+	Escribir 'ingrese un numero de una operacion la cual quiera realizar'
+	Escribir '1.- secuencia fibonacci '
+	Escribir '2.- piramide de caracteres '
+	Escribir '3.- operaciones basicas '
+	Leer eleccion
+	Segun eleccion  Hacer
 		1:
-			
-			
-			
-			definir limite,num_n,num1,num2 Como Entero;
-			escribir "ingrese un numero al cual se aproxime la serie de fibonacci ";
-			leer limite;
-			num1<-0;
-			num2<-1;
-			si (limite<=0)
-				Escribir "la serie no va hacia abajo";
+			Definir limite,num_n,num1,num2 Como Entero
+			Escribir 'ingrese un numero al cual se aproxime la serie de fibonacci '
+			Leer limite
+			num1 <- 0
+			num2 <- 1
+			Si (limite<=0) Entonces
+				Escribir 'la serie no va hacia abajo'
 			SiNo
-				
-				si (limite>0)
-					escribir num1;
-					
-					si (limite>1)
-					
-						escribir num2;
+				Si (limite>0) Entonces
+					Escribir num1
+					Si (limite>1) Entonces
+						Escribir num2
 					FinSi
-			FinSi
-		
-			Mientras (num1<=limite & num2<=limite & num_n<=limite)
-				num_n<-num1+num2;
-				
-				si (num_n<=limite)
-					escribir num_n;
 				FinSi
-				
-				num1<-num2;
-				num2<-num_n;
-				
-			FinMientras
-			
-		FinSi
-		
-			
-		2:
-			
-			
-			
-			
-			
-			definir carac Como Caracter;
-			definir nivel Como Entero;
-			
-			escribir "ingrese un numero para limitar los niveles:" ;
-			leer nivel ;
-			escribir "ingrese un solo caracter para haser la piramide:";
-			leer carac;
-			
-			si (nivel<=0)
-				
-				escribir "no existen los niveles negativos y/o nivel cero ";	
-				
-			SiNo
-				
-				Para i<-nivel Hasta 1 Con Paso -1 Hacer
-					
-					para k<-i hasta  1 con paso -1 Hasta 
-						escribir Sin Saltar " ";
-						
-					FinPara
-					
-					para j<-0 hasta nivel-i con paso 1 hacer 
-						escribir Sin Saltar " ",carac;
-					finPara
-					escribir " ";
-				Fin Para
-				
-			FinSi;
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-		3:
-			
-			
-			
-			
-			
-			
-			
-			Definir elecion como entero;
-			definir num1,num2,total Como Real;
-			
-			escribir "ingrese la operacion que quiere realizar";
-			escribir "1.- suma ";
-			escribir "2.- resta ";
-			escribir "3.- multiplicacion "; 
-			escribir "4.- division ";
-			escribir "5.- potencia ";
-			escribir "6.- factorial";
-			leer elecion;
-			
-			segun elecion hacer
-				
-				1:
-					definir elecSuma Como Entero;
-					
-					escribir "ingrese el numero de variables a sumar: ";
-					leer elecSuma;
-					
-					si (elecSuma<=1)
-						
-						escribir "la suma de los numeros, comienza apartir de 2 variables";
-						
-					sino 	
-						
-						escribir "ingrese el valor del primer numero: ";
-						leer num1;
-						
-						para i<-1 Hasta elecSuma-1 Con Paso 1 Hacer
-							
-							escribir "ingrese el valor del siguente numero: ";
-							leer num2;
-							
-							total<-total+num2;
-							
-						FinPara
-						
-						total<-total+num1;
-						
-						escribir "el resultado de la suma es: ",total;
-						
+				Mientras (num1<=limite Y num2<=limite Y num_n<=limite) Hacer
+					num_n <- num1+num2
+					Si (num_n<=limite) Entonces
+						Escribir num_n
 					FinSi
-					
-				2:
-					definir elecResta Como Entero;
-					
-					escribir "ingrese el numero de variables a resta: ";
-					leer elecResta;
-					
-					si (elecResta<=1)
-						
-						escribir "la resta de los numeros, comienza apartir de 2 variables";
-						
-					sino 	
-						
-						escribir "ingrese el valor del primer numero: ";
-						leer num1;
-						
-						para i<-1 Hasta elecResta-1 Con Paso 1 Hacer
-							
-							escribir "ingrese el valor del siguente numero: ";
-							leer num2;
-							
-							total<-total-num2;
-							
+					num1 <- num2
+					num2 <- num_n
+				FinMientras
+			FinSi
+		2:
+			Definir carac Como Caracter
+			Definir nivel Como Entero
+			Escribir 'ingrese un numero para limitar los niveles:'
+			Leer nivel
+			Escribir 'ingrese un solo caracter para haser la piramide:'
+			Leer carac
+			Si (nivel<=0) Entonces
+				Escribir 'no existen los niveles negativos y/o nivel cero '
+			SiNo
+				Para i<-nivel Hasta 1 Con Paso -1 Hacer
+					Para k<-i Hasta 1 Con Paso -1 HASTA Hacer
+						Escribir ' ' Sin Saltar
+					FinPara
+					Para j<-0 Hasta nivel-i Hacer
+						Escribir ' ',carac Sin Saltar
+					FinPara
+					Escribir ' '
+				FinPara
+			FinSi
+		3:
+			Definir elecion Como Entero
+			Definir num1,num2,total Como Real
+			Escribir 'ingrese la operacion que quiere realizar'
+			Escribir '1.- suma '
+			Escribir '2.- resta '
+			Escribir '3.- multiplicacion '
+			Escribir '4.- division '
+			Escribir '5.- potencia '
+			Escribir '6.- factorial'
+			Leer elecion
+			Segun elecion  Hacer
+				1:
+					Definir elecSuma Como Entero
+					Escribir 'ingrese el numero de variables a sumar: '
+					Leer elecSuma
+					Si (elecSuma<=1) Entonces
+						Escribir 'la suma de los numeros, comienza apartir de 2 variables'
+					SiNo
+						Escribir 'ingrese el valor del primer numero: '
+						Leer num1
+						Para i<-1 Hasta elecSuma-1 Hacer
+							Escribir 'ingrese el valor del siguente numero: '
+							Leer num2
+							total <- total+num2
 						FinPara
-						
-						total<-total-num1;
-						
-						escribir "el resultado de la resta es: ",total;
-						
+						total <- total+num1
+						Escribir 'el resultado de la suma es: ',total
+					FinSi
+				2:
+					Definir elecResta Como Entero
+					Escribir 'ingrese el numero de variables a resta: '
+					Leer elecResta
+					Si (elecResta<=1) Entonces
+						Escribir 'la resta de los numeros, comienza apartir de 2 variables'
+					SiNo
+						Escribir 'ingrese el valor del primer numero: '
+						Leer num1
+						total <- num1
+						Para i<-1 Hasta elecResta-1 Hacer
+							Escribir 'ingrese el valor del siguente numero: '
+							Leer num2
+							total <- total-num2
+						FinPara
+						Escribir 'el resultado de la resta es: ',total
 					FinSi
 				3:
-					definir elecMulti Como Entero;
-					
-					escribir "ingrese el numero de variables a multiplicar: ";
-					leer elecMulti;
-					
-					si (elecmulti<=1)
-						
-						escribir "la multiplicacion de los numeros, comienza apartir de 2 variables";
-						
-					sino 	
-						num1<-1;
-						num2<-1;
-						total<-1;
-						escribir "ingrese el valor del primer numero: ";
-						leer num1;
-						
-						para i<-1 Hasta elecmulti-1 Con Paso 1 Hacer
-							
-							escribir "ingrese el valor del siguente numero: ";
-							leer num2;
-							
-							total<-total*num2;
-							
+					Definir elecmulti Como Entero
+					Escribir 'ingrese el numero de variables a multiplicar: '
+					Leer elecmulti
+					Si (elecmulti<=1) Entonces
+						Escribir 'la multiplicacion de los numeros, comienza apartir de 2 variables'
+					SiNo
+						num1 <- 1
+						num2 <- 1
+						Escribir 'ingrese el valor del primer numero: '
+						total <- 1
+						Leer num1
+						Para i<-1 Hasta elecmulti-1 Hacer
+							Escribir 'ingrese el valor del siguente numero: '
+							Leer num2
+							total <- total*num2
 						FinPara
-						
-						total<-total*num1;
-						
-						escribir "el resultado de la mutiplicacion es: ",total;
-						
+						total <- total*num1
+						Escribir 'el resultado de la mutiplicacion es: ',total
 					FinSi
 				4:
-					definir elecDivi Como Entero;
-					
-					escribir "ingrese el numero de variables a Dividir: ";
-					leer elecDivi;
-					
-					si (elecDivi<=1)
-						
-						escribir "la division de los numeros, comienza apartir de 2 variables";
-						
-					sino 	
-						
-						escribir "ingrese el primer valor: ";
-						leer num1;
-						
-						si (num1=0)
-							
-							escribir "el cero no es un numero bueno para la divicion";
-							escribir "el resultado de la Division es: ",total;
-							
+					Definir elecDivi Como Entero
+					Escribir 'ingrese el numero de variables a Dividir: '
+					Leer elecDivi
+					Si (elecDivi<=1) Entonces
+						Escribir 'la division de los numeros, comienza apartir de 2 variables'
+					SiNo
+						Escribir 'ingrese el primer valor: '
+						Leer num1
+						Si (num1=0) Entonces
+							Escribir 'el cero no es un numero bueno para la divicion'
+							Escribir 'el resultado de la Division es: ',total
 						SiNo
-							
-							total<-num1;
-							
-							para i<-1 Hasta elecDivi-1 Con Paso 1 Hacer
-								
-								escribir "ingrese el valor de la variable: ";
-								leer num2;
-								si (num2=0)
-									
-									escribir "el cero no es un numero bueno para la divicion";
-									
+							total <- num1
+							Para i<-1 Hasta elecDivi-1 Hacer
+								Escribir 'ingrese el valor de la variable: '
+								Leer num2
+								Si (num2=0) Entonces
+									Escribir 'el cero no es un numero bueno para la divicion'
 								SiNo
-									
-									total<-total/num2;
-									
-								finsi
+									total <- total/num2
+								FinSi
 							FinPara
-							
-							escribir "el resultado de la Division es: ",total;
-						finsi
-						
+							Escribir 'el resultado de la Division es: ',total
+						FinSi
 					FinSi
 				5:
-					escribir "ingrese el que se va a elevar: ";
-					leer num1;
-					
-					escribir "ingrese el numero al cua se elevara el anterior: ";
-					leer num2;
-					total<-num1^num2;
-					
-					escribir " el resultado de la potencia es: ",total;
+					Escribir 'ingrese el que se va a elevar: '
+					Leer num1
+					Escribir 'ingrese el numero al cua se elevara el anterior: '
+					Leer num2
+					total <- num1^num2
+					Escribir ' el resultado de la potencia es: ',total
 				6:
-					definir numN,factorial como entero; 
-					
-					escribir "ingrese un numero: ";
-					leer numN;
-					
-					total<-1;
-					
-					para i<-1 Hasta numN-1 Con Paso 1 Hacer
-						
-						factorial<-total*i;
-						
-						total<-total+factorial;
-						
+					Definir numN,factorial Como Entero
+					Escribir 'ingrese un numero: '
+					Leer numN
+					total <- 1
+					Para i<-1 Hasta numN-1 Hacer
+						factorial <- total*i
+						total <- total+factorial
 					FinPara
-					
-					escribir "el resultado es :",total;	
-					
+					Escribir 'el resultado es :',total
 				De Otro Modo:
-					
-					escribir " no es niguna de las opciones ";
-					
-			FinSegun	
-			
-			
+					Escribir ' no es niguna de las opciones '
+			FinSegun
 		De Otro Modo:
-			escribir "la eleccion no coincide con las opciones :\"; 
-			
+			Escribir 'la eleccion no coincide con las opciones :\'
 	FinSegun
 FinAlgoritmo
